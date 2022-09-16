@@ -1,0 +1,125 @@
+\documentclass[a4paper, 12pt]{report}
+\usepackage{/Users/fgu/dev/projects/dotfiles/latex/wbsthesis}
+\bibliography{/Users/fgu/dev/projects/dotfiles/latex/fabib}
+\onehalfspacing
+
+\newcommand{\figdir}{figures}
+\newcommand{\tabdir}{tables}
+
+\newcommand{\projects}{/Users/fgu/dev/projects}
+\newcommand{\mlbt}{\projects/mlbt/text/paper/sections}
+\newcommand{\entropy}{\projects/entropy/text/paper/sections}
+\newcommand{\eval}{\projects/mdb_eval/text/paper/sections}
+
+\begin{document}
+
+
+% Title page
+\newgeometry{top=3.5cm, bottom=2cm, left=3cm, right=3cm}
+
+\begin{center}
+\thispagestyle{empty}
+
+\includegraphics[width=.3\textwidth]{warwickcrest.pdf}
+
+{\bf\LARGE Essays on financial behaviour using transaction data}
+\vspace{2cm}
+
+by
+
+Fabian Gunzinger
+
+
+Thesis submitted to the University of Warwick for the degree of Doctor of
+Philosophy
+
+University of Warwick \\
+Warwick Business School \\
+September 2023
+
+
+
+% {\LARGE
+% Fabian Gunzinger\\
+% \vspace{.5cm}
+% Lincoln College\\
+% University of Oxford\\}
+% \vspace{2.5cm}
+
+% \vspace{2.5cm}
+
+% {\large
+% A thesis submitted in partial fulfilment
+% \\ of the requirements for the degree of the\\
+% Master of Philosophy in Economics\\
+% \vspace{1cm}
+% Trinity 2017\\
+% \vspace{1cm}
+% \noindent{Word count:} 17,010
+% }}}
+
+\end{center}
+
+\restoregeometry
+
+% Contents
+\pagenumbering{roman}
+
+\tableofcontents
+\listoftables
+\listoffigures
+
+% Start page numbering 
+
+% Main content
+% \clearpage %% start of mainmatter\
+\pagenumbering{arabic}
+
+\chapter*{Acknowledgements}
+
+\chapter*{Declarations}
+
+\chapter*{Abstract}
+
+\chapter*{Introduction}%
+\label{cha:introduction}
+
+This is the intro to my thesis.
+
+
+\chapter{Machine-learned behaviour traits}%
+\label{cha:machine_learned_behaviour_traits}
+\input{\mlbt/intro.tex}
+\input{\mlbt/models.tex}
+\input{\mlbt/data.tex}
+\input{\mlbt/estimation.tex}
+\input{\mlbt/discussion.tex}
+
+\chapter{Spending entropy predicts savings behaviour}%
+\label{cha:spending_entropy_predicts_savings_behaviour}
+\input{\entropy/intro.tex}
+\input{\entropy/methods.tex}
+\input{\entropy/spend_profiles.tex}
+\input{\entropy/savings_patterns.tex}
+\input{\entropy/results.tex}
+\input{\entropy/discussion.tex}
+\appendix
+\input{\entropy/entropy_details.tex}
+\input{\entropy/additional_results.tex}
+
+\chapter{Do Money Dashboard users spend more and save less?}%
+\label{cha:do_money_dashboard_users_spend_more_and_save_less_}
+\input{\eval/intro.tex}
+\input{\eval/data.tex}
+\input{\eval/estimation.tex}
+\input{\eval/results.tex}
+\input{\eval/conclusion.tex}
+\appendix
+\input{\eval/additional_results.tex}
+
+\newpage
+\printbibliography
+
+\end{document}
+
+
