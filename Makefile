@@ -1,4 +1,3 @@
-
 PROJECTS := /Users/fgu/dev/projects
 SECTIONS := /text/paper/sections
 THESIS := $(PROJECTS)/warwickthesis
@@ -9,7 +8,6 @@ EVAL := $(PROJECTS)/mdb_eval
 
 .PHONY: thesis
 thesis: clean_inputs gather_inputs pdf view
-
 
 .PHONY: clean_inputs
 clean_inputs:
@@ -25,12 +23,11 @@ gather_inputs:
 	cp -R $(EVAL)/output/figures/* $(THESIS)/figures/
 	cp -R $(EVAL)/output/tables/* $(THESIS)/tables/
 
-
 .PHONY: pdf
 pdf:
 	pdflatex thesis.tex -o thesis.pdf
 
-
 .PHONY: view
 view:
 	open thesis.pdf
+
