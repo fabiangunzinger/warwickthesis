@@ -7,7 +7,7 @@ EVAL := $(PROJECTS)/mdb_eval
 
 
 .PHONY: thesis
-thesis: clean_inputs gather_inputs pdf view
+thesis: clean_inputs gather_inputs compile_pdf view
 
 .PHONY: clean_inputs
 clean_inputs:
@@ -23,8 +23,8 @@ gather_inputs:
 	cp -R $(EVAL)/output/figures/* $(THESIS)/figures/
 	cp -R $(EVAL)/output/tables/* $(THESIS)/tables/
 
-.PHONY: pdf
-pdf:
+.PHONY: compile_pdf
+compile_pdf:
 	pdflatex thesis.tex -o thesis.pdf
 
 .PHONY: view
