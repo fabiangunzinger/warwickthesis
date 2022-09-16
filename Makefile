@@ -7,10 +7,10 @@ EVAL := $(PROJECTS)/mdb_eval
 
 
 .PHONY: thesis
-thesis: clean_inputs gather_inputs compile_pdf view
+thesis: clean_dirs gather_inputs compile_pdf view
 
-.PHONY: clean_inputs
-clean_inputs:
+.PHONY: clean_dirs
+clean_dirs:
 	rm -rf figures/*
 	rm -rf tables/*
 
