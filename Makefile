@@ -1,5 +1,4 @@
 PROJECTS := /Users/fgu/dev/projects
-SECTIONS := /text/paper/sections
 THESIS := $(PROJECTS)/warwickthesis
 MLBT := $(PROJECTS)/mlbt
 ENTROPY := $(PROJECTS)/entropy
