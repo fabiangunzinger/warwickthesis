@@ -1,55 +1,36 @@
-%   paper.sty, fabian gunzinger
-%   setup for academic paper
+%
+%   warwickthesis.sty
+%
+%   Style file for Warwick PhD thesis.
+%
+%   Fabian Gunzinger, September 2022
+%
 
 
-% Basic packages
+% Load packages
 \usepackage{
     adjustbox,
-    amsmath,   % math notation
-    amssymb,   %math symbols
-    booktabs,   % nice tables
-    float,   % required for H figure placement specifier
-    fontawesome,   % internet symbols
-    graphicx,   % graphics/figures support
-    lscape,   % landscape pages
-    pgffor,   % for loops
-    setspace,   % linespacing
-    tabularx,   % custom table width
-    threeparttable,   % pretty reg table notes layout
-    subcaption   % create labelled subfigures
-    % amsfonts,
-    % bbm,
-    % calc,
-    % epstopdf,
-    % enumerate,
-    % enumitem,
-    % endnotes,
-    % latexsym,
-    % morefloats,
-    % fancyhdr,
-    % url,
-    % caption,
-    % threeparttable,
-    % dcolumn,
-    % tikz,
-    % xfrac,
-    % xcolor
+    amsmath,   % Math notation
+    amssymb,   % Math symbols
+    booktabs,   % Nice tables
+    float,   % Required for H figure placement specifier
+    fontawesome,   % Internet symbols
+    graphicx,   % Graphics/figures support
+    lscape,   % Landscape pages
+    pgffor,   % For loops
+    setspace,   % Linespacing
+    tabularx,   % Custom table width
+    threeparttable,   % Pretty reg table notes layout
+    subcaption   % Create labelled subfigures
 }
 
-
-\usepackage[margin=2.5cm]{geometry}   % page margins
-
-\usepackage[utf8, ansinew]{inputenc}    % unicode encoding
+\usepackage[dvipsnames]{xcolor}   % Load 68 named colours
+\usepackage[margin=2.5cm]{geometry}   % Page margins
+\usepackage[utf8, ansinew]{inputenc}    % Unicode encoding
 \usepackage{csquotes}
-\usepackage[ngerman, english]{babel}    % required for umlaute
-\usepackage[T1]{fontenc}                % required for umlaute
-
-% \usepackage[section]{placeins}
-% \usepackage{placeins}
-% \usepackage{adjustbox}
-
-% Hyper refs
-\usepackage[
+\usepackage[ngerman, english]{babel}    % Required for umlaute
+\usepackage[T1]{fontenc}                % Required for umlaute
+\usepackage[   % Hyper refs
     colorlinks,
     breaklinks,
     bookmarks=false,
@@ -60,10 +41,7 @@
     citecolor=blue,
     hyperfootnotes=false
 ]{hyperref}
-% \usepackage[figure,table]{hypcap}
-
-% Bibliography style settings.
-\usepackage[
+\usepackage[   % Bibliography style
 	backend=biber,
     bibencoding=utf8,
 	style=authoryear,
@@ -89,9 +67,14 @@
  }
 }
 
-% Block quotes
-% \usepackage{etoolbox}
-% \AtBeginEnvironment{quote}{\singlespacing\small}
+\bibliography{/Users/fgu/dev/projects/dotfiles/latex/fabib}
+% Directory shortcuts
+\newcommand{\figdir}{figures}
+\newcommand{\tabdir}{tables}
+\newcommand{\projects}{/Users/fgu/dev/projects}
+\newcommand{\mlbt}{\projects/mlbt/text/paper/sections}
+\newcommand{\entropy}{\projects/entropy/text/paper/sections}
+\newcommand{\eval}{\projects/mdb_eval/text/paper/sections}
 
 % Command shortcuts
 \newcommand{\citet}[1]{\textcite{#1}}
@@ -105,11 +88,6 @@
 \newcommand{\tabnote}[2]{{\center\parbox[c]{#1}{\footnotesize Notes: #2}}}
 \newcommand{\source}[1]{{\center\scriptsize Source: #1}}
 \newcommand{\what}[1]{{\noindent\textit{\color{blue}{#1}}}}
-
-% Title case format
-% \captionsetup{labelfont=bf, font=bf}
-
-
 
 \newcommand{\maketitlepage}{
 \newgeometry{top=3.5cm, bottom=2cm, left=3cm, right=3cm}
