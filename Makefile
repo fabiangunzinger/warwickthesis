@@ -28,5 +28,5 @@ compile_pdf:
 
 .PHONY: view_pdf
 view_pdf:
-	open thesis.pdf
+	open -a Skim.app thesis.pdf
 
