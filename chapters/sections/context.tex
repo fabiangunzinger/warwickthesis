@@ -1,18 +1,5 @@
 % !TEX root = ../thesis.tex
 
-\chapter{Introduction}%
-\label{cha:introduction}
-
-The overall aim of this thesis is to use transaction-level data from a
-financial aggregator app, insights from behavioural science, and methods from
-econometrics and machine learning to contribute to a better understanding of
-the determinants of how individuals spend their money and save for the
-short-term.
-
-This introductory chapter first discusses the context within which this
-research takes place, and then introduces the main chapters of the thesis.
-
-
 \section{Context}%
 \label{sec:context}
 
@@ -140,9 +127,17 @@ But many people struggle with these behaviours. For instance, in the UK, 21
 percent of the working-age population (10.7 million adults) report to rarely or
 never save, and 22 percent of the population have less than \pounds100 in
 savings, with those holding that amount in a formal savings account being even
-lower. Unsurprisingly, then, one in four adults could not pay an unexpected
-bill of \pounds300 from their own money. In the US, the situation is similar,
-with 30 percent of adults saying they would be unable to cover a bill of \$400.
+lower \citep{mps2018building}. Unsurprisingly, then, one in four adults could
+not pay an unexpected bill of \pounds300 from their own money
+\citep{phillips2021supporting}. In the US, the situation is similar: 30 percent
+of adults report that they would be unable to cover a bill of \$400 in cash or
+its equivalents \citep{fed2022economic}, and, according to a 2013 survey,
+liquid net worth for the median household with a head aged 41-51 is only \$813,
+whereas at the 25th percentile it is -\$1,885
+\citep{beshears2018behavioral}.\footnote{Liquid net worth includes all assets
+    (except pension wealth, retirement savings, homes, and durable assets) net
+of all debt (except student loans and collateralised debt).}
+
 This is problematic because many households do face unexpected financial shocks
 over the course of a year. Also, many households experience high income
 volatility: in the US between 2013 and 2018, the median month-to-month change
@@ -155,12 +150,6 @@ percent of households lack such a buffer. In line with these findings,
 with liquid asses of above \$2,000 had significantly lower risk to experience
 financial distress (indicators like skipping essential bills, being behind on
 credit card debt, being in overdraft) than households with lower savings.
-
-\edit{Beef up with additional data and refs}
-
-% \citet{beshears2018behavioral}: In the 2013 Survey of Consumer Finances, liquid net worth for the median household with a head aged 41– 51 is only $813, whereas at the 25th percentile it is –$1,885 (Beshears et al. 2018a).1 The picture is only slightly better for households nearing or en- tering retirement (after a lifetime of saving). Among households whose head is age 61–70, median liquid net worth is $6,213, whereas at the 25th percentile it is $1.
-% 1 Liquid net worth includes all assets (except pension wealth; retirement savings ac- counts, e.g., 401(k) accounts and IRAs; homes; and durable assets) net of all debt (except student loans and collateralized debts, e.g., mortgages and car loans)
-
 
 Managing debt is similarly challenging for many. 9 million people in the UK
 also borrow to cover expenses for food and bills \citep{mps2018building}, and
@@ -290,10 +279,10 @@ at a scale and with an ease that was not possible before
 instance, to predict participant personalities and life outcomes
 \citep{youyou2015computer}, and to study the effect of social interactions on
 house purchasing decisions \citep{bailey2018economic, bailey2019house}, the
-spatial structure of urban networks \citep{bailey2020social}, the role of peer
+spatial structure of urban networks \citep{bailey2020socialconnectedness}, the role of peer
 effects in product adoption \citep{bailey2019peer}, the role of social networks
 in determining social distancing during the coronavirus pandemic
-\citep{bailey2020social}, and the determinants of social mobility
+\citep{bailey2020socialnetworks}, and the determinants of social mobility
 \citep{chetty2022sociali, chetty2022socialii}. Similarly, log and sensor data
 from mobile phones, another increasingly popular data source in the study of
 human behaviour, has been used to successfully predict personality traits
@@ -397,91 +386,4 @@ about how to work with these data and tools responsibly
 private companies as well as research institutions have put in place
 safeguarding procedures to ensure that such best practices and current
 regulations are followed at the level of individual research projects.
-
-
-\section{Thesis outline}%
-\label{sec:objectives}
-
-This thesis consists of three stand-alone chapters that all share the overall
-aim of combining transaction-level financial data, insights from behavioural
-science, and statistical methods to better understand how individuals spend and
-save money -- with the ultimate aim of producing insights that can inform the
-design of tools aimed to increase financial wellbeing. A particular focus is on
-studying ``emergency savings'' -- short term savings accumulated as a buffer
-against unexpected financial shocks -- because such savings, as we have seen
-above, are a critical component of financial wellbeing and because, in contrast
-to other components like pension contributions, it is understudied. Apart from
-\citet{beshears2020building}, who study design options for automated
-contributions to emergency saving pots, and \citet{phillips2021supporting}, who
-test such a design in the UK, there is no research on how we can help
-individuals build such emergency savings.
-
-Chapter~\ref{cha:mlbt} introduces and tests a new method that allows
-researchers to elicit for individuals in a large datasets behaviour traits of
-the type used in lab and survey studies. This work contributes to the overall
-thesis purpose indirectly in that it aims to augment the information contained
-in large datasets with additional information that opens up additional avenues
-of research and helps researchers fully leverage the data in their study of
-human behaviour. \edit{We test our method...}
-
-Chapter~\ref{cha:entropy} tests whether the way individuals spend their money
-is related to how frequently they make transfers into their emergency savings
-funds. We ...
-
-Chapter~\ref{cha:eval} ...
-
-
-
-
-
-
-
-
-%%% meta objective
-
-- link to replication crisis - see davidthesis
-
-
-- vision ahead of reality
-
-\begin{itemize}
-    \item I use a single dataset, provided by Money Dashboard, for all three
-        papers.
-
-    \item The data presented a number of challenges.
-
-    \item Handling data of this size.
-
-    \item Secure storage with easy remote access (AWS).
-
-    \item Consistenc and efficient preprocessing (my process).
-
-    \item Open science contribution: all work available on Github, code
-        available for preprocessing from beginning to end.
-\end{itemize}
-
-\paragraph{Motivation:}%
-\label{par:motivation_}
-
-My experience as a researcher in well-known academic and private-sector
-institutions has made clear to me over the years that careful, reliable, and
-replicable data preprocessing is undervalued in many settings.
-
-The result are plain data errors that overturn results (Reinhard and Rogoff)
-and replication issues (see Ariely controversies). Given my experience, I'd
-think that all we know is the tip of the iceberg.
-
-In the vast majority of empirical research projects there is no good reason to
-not make the code public, even when the data is proprietary. And yet, for the
-vast majority of papers, there is no code available to replicate findings and
-check precise implementation details, which often matter but are not described
-in papers.
-
-All of this harms science - the quality of it and the trust in it.
-
-I have dedicated a lot of time during my PhD to ensure that I can rectify at
-least some of those issues.
-
-The code for all my projects is available online and includes scripts that can
-be used to easily run the entire analysis.
 
