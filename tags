@@ -12,6 +12,7 @@ Declaration	chapters/declaration.tex	/^\\chapter*{Declaration}%$/;"	c
 Do Money Dashboard users spend more and save less	chapters/eval.tex	/^\\chapter{Do Money Dashboard users spend more and save less?}%$/;"	c
 ENTROPY	Makefile	/^ENTROPY := $(PROJECTS)\/entropy$/;"	m
 EVAL	Makefile	/^EVAL := $(PROJECTS)\/mdb_eval$/;"	m
+FinTech	chapters/sections/context.tex	/^\\subsection{FinTech}%$/;"	b
 Financial wellbeing	chapters/sections/context.tex	/^\\subsection{Financial wellbeing}%$/;"	b
 Introduction	chapters/intro.tex	/^\\chapter{Introduction}%$/;"	c
 MLBT	Makefile	/^MLBT := $(PROJECTS)\/mlbt$/;"	m
