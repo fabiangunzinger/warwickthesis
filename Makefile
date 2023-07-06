@@ -1,4 +1,4 @@
-PROJECTS := /Users/fgu/dev/projects
+PROJECTS := /Users/fgu/dev/personal
 THESIS := $(PROJECTS)/warwickthesis
 MLBT := $(PROJECTS)/mlbt
 ENTROPY := $(PROJECTS)/entropy
