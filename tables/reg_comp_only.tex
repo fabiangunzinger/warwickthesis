@@ -1,0 +1,29 @@
+
+\begingroup
+\centering
+\begin{tabular}{lcccc}
+   \toprule
+    & \multicolumn{2}{c}{Entropy (48 cats)} & \multicolumn{2}{c}{Entropy (48 cats, smooth)} \\ 
+                                          & (1)              & (2)              & (3)              & (4)\\  
+   \midrule 
+   Unique categories ($|\mathcal{C}^+|$)  & 0.077            & 0.073            & 0.009            & 0.009\\   
+                                          & [0.077; 0.078]   & [0.073; 0.074]   & [0.009; 0.009]   & [0.008; 0.010]\\   
+   Category counts std.                   & -0.283           & -0.276           & -0.444           & -0.431\\   
+                                          & [-0.284; -0.282] & [-0.283; -0.270] & [-0.445; -0.443] & [-0.441; -0.421]\\   
+   Number of spend txns ($F$)             & 0.013            & 0.013            & 0.010            & 0.010\\   
+                                          & [0.013; 0.013]   & [0.013; 0.013]   & [0.010; 0.010]   & [0.009; 0.010]\\   
+   (Intercept)                            & -0.606           &                  & 0.418            &   \\   
+                                          & [-0.609; -0.604] &                  & [0.414; 0.422]   &   \\   
+    \\
+   Co-variance                            & IID              & User             & IID              & User \\   
+   Observations                           & 389,790          & 389,790          & 389,790          & 389,790\\  
+   R$^2$                                  & 0.88097          & 0.93219          & 0.87122          & 0.93063\\  
+   Within R$^2$                           &                  & 0.80362          &                  & 0.82674\\  
+    \\
+   User fixed effects                     &                  & $\checkmark$     &                  & $\checkmark$\\   
+   Year-month fixed effects               &                  & $\checkmark$     &                  & $\checkmark$\\   
+   \bottomrule
+\end{tabular}
+\par\endgroup
+
+

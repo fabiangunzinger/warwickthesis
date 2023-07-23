@@ -24,7 +24,7 @@ gather_inputs:
 
 .PHONY: compile_pdf
 compile_pdf:
-	pdflatex thesis.tex -o thesis.pdf
+	latexmk -pdf thesis.tex
 
 .PHONY: view_pdf
 view_pdf:

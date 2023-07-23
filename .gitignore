@@ -1,9 +1,3 @@
-# Don't synch figures and tables
-/figures
-/tables
-
-
-
 # Created by https://www.toptal.com/developers/gitignore/api/latex
 # Edit at https://www.toptal.com/developers/gitignore?templates=latex
 
