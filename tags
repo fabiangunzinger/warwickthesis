@@ -1,0 +1,25 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+Abstract	chapters/abstract.tex	/^\\chapter*{Abstract}%$/;"	c
+Acknowledgements	chapters/acknowledgements.tex	/^\\chapter*{Acknowledgements}%$/;"	c
+Conclusion	chapters/conclusion.tex	/^\\chapter{Conclusion}%$/;"	c
+Context	chapters/sections/context.tex	/^\\section{Context}%$/;"	s
+Declaration	chapters/declaration.tex	/^\\chapter*{Declaration}%$/;"	c
+Do Money Dashboard users spend more and save less	chapters/eval.tex	/^\\chapter{Do Money Dashboard users spend more and save less?}%$/;"	c
+ENTROPY	Makefile	/^ENTROPY := $(PROJECTS)\/entropy$/;"	m
+EVAL	Makefile	/^EVAL := $(PROJECTS)\/mdb_eval$/;"	m
+FinTech	chapters/sections/context.tex	/^\\subsection{FinTech}%$/;"	b
+Financial wellbeing	chapters/sections/context.tex	/^\\subsection{Financial wellbeing}%$/;"	b
+Introduction	chapters/intro.tex	/^\\chapter{Introduction}%$/;"	c
+MLBT	Makefile	/^MLBT := $(PROJECTS)\/mlbt$/;"	m
+Machine learned behaviour traits	chapters/mlbt.tex	/^\\chapter{Machine-learned behaviour traits}%$/;"	c
+Motivation	chapters/sections/objectives.tex	/^\\paragraph{Motivation:}%$/;"	P
+Objectives and research questions	chapters/sections/objectives.tex	/^\\section{Objectives and research questions}%$/;"	s
+PROJECTS	Makefile	/^PROJECTS := \/Users\/fgu\/dev\/personal$/;"	m
+Spending entropy predicts savings behaviour	chapters/entropy.tex	/^\\chapter{Spending entropy predicts savings behaviour}%$/;"	c
+THESIS	Makefile	/^THESIS := $(PROJECTS)\/warwickthesis$/;"	m
+Thesis outline	chapters/sections/outline.tex	/^\\section{Thesis outline}%$/;"	s
