@@ -68,7 +68,9 @@
  }
 }
 
-\bibliography{/Users/fgu/.dotfiles/latex/fabib}
+% Use bib from local directory since biblatex cannot find
+% it in .dotfiles becaue it's a dot directory. Uses symlink.
+\bibliography{inputs/fabib.bib}
 
 % Directory shortcuts
 \newcommand{\figdir}{figures}
