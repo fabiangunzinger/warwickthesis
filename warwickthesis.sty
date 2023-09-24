@@ -7,10 +7,6 @@
 %
 
 
-% Use bib from local directory since biblatex cannot find
-% it in .dotfiles. Uses symlink.
-\bibliography{inputs/fabib.bib}
-
 % Directory shortcuts
 \newcommand{\figdir}{figures}
 \newcommand{\tabdir}{tables}
@@ -126,4 +122,8 @@ September 2023
   \clearfield{doi}
  }
 }
+
+% Use bib from local directory since biblatex cannot find
+% it in .dotfiles. Uses symlink.
+\bibliography{inputs/fabib.bib}
 
