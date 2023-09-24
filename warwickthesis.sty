@@ -7,69 +7,8 @@
 %
 
 
-% Load packages
-\usepackage{
-    adjustbox,
-    amsmath,   % Math notation
-    amssymb,   % Math symbols
-    booktabs,   % Nice tables
-    float,   % Required for H figure placement specifier
-    fontawesome,   % Internet symbols
-    graphicx,   % Graphics/figures support
-    lscape,   % Landscape pages
-    pgffor,   % For loops
-    setspace,   % Linespacing
-    tabularx,   % Custom table width
-    threeparttable,   % Pretty reg table notes layout
-    subcaption   % Create labelled subfigures
-}
-
-\usepackage[toc,title,titletoc]{appendix}   % more control of appendices
-\usepackage[dvipsnames]{xcolor}   % Load 68 named colours
-\usepackage[left=4cm, right=2.5cm, top=2.5cm, bottom=2.5cm]{geometry}   % Page margins
-\usepackage[utf8, ansinew]{inputenc}    % Unicode encoding
-\usepackage{csquotes}
-\usepackage[ngerman, english]{babel}    % Required for umlaute
-\usepackage[T1]{fontenc}                % Required for umlaute
-\usepackage[   % Hyper refs
-    colorlinks,
-    breaklinks,
-    bookmarks=false,
-    pdfstartview=Fit,  % for fitting entire page; FitW just fits width
-    pdfview=Fit,       % after traversing a hyperlink
-    linkcolor=black,
-    urlcolor=black,
-    citecolor=black,
-    hyperfootnotes=false
-]{hyperref}
-\usepackage[   % Bibliography style
-	backend=biber,
-    bibencoding=utf8,
-	style=authoryear,
-	maxcitenames=2,
-    maxbibnames=30,
-	isbn=false,
-	eprint=false,
-	url=true
-]{biblatex}
-\renewcommand*{\multicitedelim}{,\space}
-\DeclareFieldFormat[techreport,report,unpublished]{title}{\mkbibquote{#1}}
-\AtEveryBibitem{% Clean up the bibtex rather than editing it
- \clearfield{date}
- \clearfield{eprint}
- \clearfield{isbn}
- \clearfield{issn}
- \clearfield{month}
- \clearfield{note}
- \clearfield{language}
- \ifentrytype{article}{
-  \clearfield{url}
-  \clearfield{doi}
- }
-}
-
 % Use bib from local directory since biblatex cannot find
-% it in .dotfiles becaue it's a dot directory. Uses symlink.
+% it in .dotfiles. Uses symlink.
 \bibliography{inputs/fabib.bib}
 
 % Directory shortcuts
@@ -126,4 +65,65 @@ September 2023
 \restoregeometry
 }
 
+
+% Load packages
+\usepackage{
+    adjustbox,
+    amsmath,   % Math notation
+    amssymb,   % Math symbols
+    booktabs,   % Nice tables
+    float,   % Required for H figure placement specifier
+    fontawesome,   % Internet symbols
+    graphicx,   % Graphics/figures support
+    lscape,   % Landscape pages
+    pgffor,   % For loops
+    setspace,   % Linespacing
+    tabularx,   % Custom table width
+    threeparttable,   % Pretty reg table notes layout
+    subcaption   % Create labelled subfigures
+}
+
+\usepackage[toc,title,titletoc]{appendix}   % more control of appendices
+\usepackage[dvipsnames]{xcolor}   % Load 68 named colours
+\usepackage[left=4cm, right=2.5cm, top=2.5cm, bottom=2.5cm]{geometry}   % Page margins
+\usepackage[utf8, ansinew]{inputenc}    % Unicode encoding
+\usepackage{csquotes}
+\usepackage[ngerman, english]{babel}    % Required for umlaute
+\usepackage[T1]{fontenc}                % Required for umlaute
+\usepackage[   % Hyper refs
+    colorlinks,
+    breaklinks,
+    bookmarks=false,
+    pdfstartview=Fit,  % for fitting entire page; FitW just fits width
+    pdfview=Fit,       % after traversing a hyperlink
+    linkcolor=black,
+    urlcolor=blue,
+    citecolor=black,
+    hyperfootnotes=false
+]{hyperref}
+\usepackage[   % Bibliography style
+	backend=biber,
+    bibencoding=utf8,
+	style=authoryear,
+	maxcitenames=2,
+    maxbibnames=30,
+	isbn=false,
+	eprint=false,
+	url=true
+]{biblatex}
+\renewcommand*{\multicitedelim}{,\space}
+\DeclareFieldFormat[techreport,report,unpublished]{title}{\mkbibquote{#1}}
+\AtEveryBibitem{% Clean up the bibtex rather than editing it
+ \clearfield{date}
+ \clearfield{eprint}
+ \clearfield{isbn}
+ \clearfield{issn}
+ \clearfield{month}
+ \clearfield{note}
+ \clearfield{language}
+ \ifentrytype{article}{
+  \clearfield{url}
+  \clearfield{doi}
+ }
+}
 
