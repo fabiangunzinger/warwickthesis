@@ -25,6 +25,7 @@ gather_inputs:
 .PHONY: compile_pdf
 compile_pdf:
 	latexmk -pdf thesis.tex
+	-rm -f *.bcf *.aux *.log *.toc *.lof *.lot *.out *.nav *.snm *.vrb *.dvi *.bbl *.blg *.brf *.idx *.ilg *.ind *.synctex.gz *.fls *.fdb_latexmk *.run.xml
 
 .PHONY: view_pdf
 view_pdf:
