@@ -16,7 +16,7 @@ FinTech	chapters/sections/context.tex	/^\\subsection{FinTech}%$/;"	b
 Financial wellbeing	chapters/sections/context.tex	/^\\subsection{Financial wellbeing}%$/;"	b
 Introduction	chapters/intro.tex	/^\\chapter{Introduction}%$/;"	c
 MLBT	Makefile	/^MLBT := $(PROJECTS)\/mlbt$/;"	m
-Machine learned behaviour traits	chapters/mlbt.tex	/^\\chapter{Machine-learned behaviour traits}%$/;"	c
+Machine learned time preferences	chapters/mlbt.tex	/^\\chapter{Machine-learned time-preferences}%$/;"	c
 Motivation	chapters/sections/objectives.tex	/^\\paragraph{Motivation:}%$/;"	P
 Objectives and research questions	chapters/sections/objectives.tex	/^\\section{Objectives and research questions}%$/;"	s
 PROJECTS	Makefile	/^PROJECTS := \/Users\/fgu\/dev\/personal$/;"	m
