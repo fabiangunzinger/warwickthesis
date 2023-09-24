@@ -30,3 +30,5 @@ compile_pdf:
 view_pdf:
 	open -a Skim.app thesis.pdf
 
+.PHONY: update_inputs
+update_inputs: clean_dirs gather_inputs
