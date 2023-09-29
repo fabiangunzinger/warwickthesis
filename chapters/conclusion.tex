@@ -1,11 +1,16 @@
 % !TEX root = ../thesis.tex
+
 \chapter{Conclusion}%
 \label{cha:conclusion}
 
 This thesis consists of three stand-alone chapters, each of which addresses a
 different aspect of my overall aim of using large-scale transaction level data,
 insights from behavioural science, and methods from econometrics and machine
-learning to study how individuals spend money and save for the short-term.
+learning to study how individuals spend and save money. In this concluding
+chapter, I summarise the main findings of each chapter before discussing
+the implications for FinTech apps and placing the work into a broader context.
+
+\subsection{Chapter summaries}
 
 Chapter~\ref{cha:mlbt}, which is joint work with Neil Stewart, introduces a
 novel approach to elicit time preferences from mass financial transaction data.
@@ -18,10 +23,7 @@ all users in the data.
 
 The three choice scenarios we identify are monthly or yearly payment for car
 insurance, purchasing a new mobile phone outright or paying in monthly
-instalments, and swapping car and home insurer frequently or infrequently.
-Each of these choices implicitly trades off a higher cost or effort in the
-present but reduced cost in the future with lower cost or effort in the present
-but higher-cost in the future. We identify individuals in our dataset that
+installments, and swapping car and home insurer frequently or infrequently. Each of these choices implicitly trades off a higher short-term cost or effort with a lower long-term cost or effort, so that being patient is beneficial in the long-run. We identify individuals in our dataset that
 engage in each of these choice scenarios, and then predict their likelihood of
 making the patient choice based on features we extract from the data. We call
 that likelihood individual's propensity for patience. We then use this
@@ -35,8 +37,8 @@ The main appeal of the approach is that, if successful, it would allow
 researchers to estimate time-preferences for a large set of individuals based
 on the smaller-sooner and larger-later payoff approach that researchers
 commonly use in lab experiments. More broadly, the general approach we
-introduce -- identify scenarios where choices used to estimate behavioural
-traits, train a prediction model on individuals in the data for whom that
+introduce -- identify scenarios where choices reveal a behavioural
+trait, train a prediction model on individuals in the data for whom that
 scenario is observed, and use that model to predict the trait for all
 individuals in the data -- could, in principle, be used for other behavioural
 traits, too. Large-scale observational data of the type used in this study has
@@ -50,13 +52,13 @@ observational data with behavioural traits elicited from the data itself.
 We find, however, that propensities for patience based on different choice
 scenarios are uncorrelated, suggesting that in our particular application, our
 approach is unsuccessful at eliciting underlying preferences. There are three
-ways in which our work could be refined in future research. First, identifying
+ways in which our work could be refined in future research. First, the use of more suitable data: identifying
 choice scenarios is made more challenging because of imperfect tagging of
 transactions in the data, and because we do not have direct access to the
 algorithms used for tagging. Using the approach on data with more complete and
 reliable tagging or in collaboration with the data provider, so that anomalies
 in the data can be identified and handled, could eliminate that source of risk.
-Second, the prediction models we used could be enhanced both with additional
+Second, better models: the prediction models we used could be enhanced both with additional
 features and by the use of more sophisticated models and further tuning. In
 terms of features, we have already discussed that, in our context, adding
 variables that more fully capture users' financial constraints might have been
@@ -64,7 +66,7 @@ useful. Furthermore, we have relied on a relatively straightforward set of
 features, that could probably be augmented. In terms of models, we have used a
 number of relatively simple ``off-the-shelf'' models. Using more advanced
 models could help provide more accurate predictions. Finally, it is possible
-that people the way people actually make intertemporal choices is not well
+that the way people actually make intertemporal choices is not well
 captured, even approximately, by the discounting models on which our
 elicitation approach builds. If this is true, then either eliciting
 time-preferences based on a different framework, or focusing on eliciting
@@ -74,9 +76,8 @@ Chapter~\ref{cha:entropy}, also join work with Neil Stewart, calculates simple
 summary statistics of individuals' spending profiles and tests whether
 differences in spending profiles are predictive of the frequency with which
 individuals make transactions into their savings accounts. To summarise
-spending profiles, we calculate the entropy of an individual's spending profile
-in a given period, which captures the predictability of spending transactions
-in said period.
+spending profiles, we calculate the entropy of an individual's spending profile, which captures the predictability of spending transactions
+in a given period.
 
 We focus on spending profiles for three reasons: first, our understanding of
 how individuals spend their money is largely based on survey data from a
@@ -97,12 +98,12 @@ when they need it most.
 
 Our results show that spending entropy is predictive of the frequency of
 savings transactions, with an effect size similar to that of an increase in
-monthly income income of between \pounds1,000 and \pounds2,000. This holds true
+monthly income of between \pounds1,000 and \pounds2,000. This holds true
 if we control for simple component parts of entropy, suggesting that the
 non-linear way in which entropy combines these components captures something
 about spending profiles that is of relevance. The results are also largely
 consistent across entropy measures calculated based on different product and
-merchant categories. However, they direction of the effect changes for
+merchant categories. However, the direction of the effect changes for
 different types of entropy that differ in the way in which we treat product or
 merchant categories in which an individual makes no transactions in a given
 period. Exploratory research suggests that the number of such zero count
@@ -137,30 +138,43 @@ the data.
 The main limitation of my approach is that I cannot isolate the effect of MDB
 use from possible confounding factors that let users to self-select into using
 the app in the first place, and that I cannot isolate the effect of individual
-components of the app such as information and goal-setting. However, I do find
-that app use is associated by a statistically and economically significantly
-reducuction of discretionary spend that is sustained for at least six months,
-and that seems to be brought about by a reduction in the number of purchases
-across a number of spending categories. This provides novel insights into how
-people who probably do have some unobserved motivation to reduce their savings
-actually achieve this. 
+components of the app such as information provision and goal-setting. However, the findings provide novel insight into how people reduce their
+spending and are strongly suggestive that using a financial aggregator app can
+help people reduce their spending. While -- as my results show -- such a
+reduction in spend does not automatically translate into an increase in
+emergency savings, they provide an opportunity for such savings. To harness
+that opportunity, FinTech apps should experiment with incorporating tools that
+make saving easy.
 
-The findings also suggest promising directions for further research. First, the
-substantial drop in discretionary spend associated with app use does suggest
-that MDB and apps like it might have a positive causal impact on financial
-outcomes, making it worthwhile to study their effect in more detail in ways
-that account for the two limitations mentioned above. Second, the finding that
-people may direct saved funds towards a number of different purposes can be the
-result of differences in funds use across or within people or a combination of
-the two. Within people variation in fund use could suggest the possibility that
-people direct additional cash-flows towards a number of different uses instead
-of towards those with the highest payoff, such as paying down credit-card debt
-or investing in government-subsidised high-interest investments. Further
-research establishing to what extent there is within-person variation of fund
-use, and whether such funds are directed towards the most effective uses would
-provide further useful insights into savings behaviour, and could serve as the
-basis for further development of financial aggregator apps to help users direct
-saved funds towards the most effective users.
+Further research could focus on causally establishing the link between app use
+and discretionary spend, as well as testing the effectiveness of various tools
+to help users turn those additional funds into savings. Another area that would
+be useful to understand is to what extent the effect of app use might depend on
+a ``dosage effect'' -- whether the effectiveness of app features is moderated
+by the intensity of app use. However, work testing such an effect will have to
+isolate dosage of exposure from personal characteristics that make certain
+users engage more with the app. Finally, the finding that people may direct
+saved funds towards a number of different purposes can be the result of
+differences in funds use across people -- different people use funds for
+different purposes -- or within people -- people all use the funds for a
+variety of different purposes -- or, most plausibly, a combination of the two.
+If people spread the additional funds across many different purposes then it
+might be the case that they miss out on directing them instead towards the use
+with the highest long-term payoff, such as paying downs of credit-card debt or
+investing in government-subsidised savings vehicles.\footnote{In the UK, for
+  instance, the first £4000 paid into a Lifetime ISA each year are matched by
+  the government by a £1000 payment, corresponding to a risk-free interest rate
+of 25 percent.} This behaviour would be similar to the finding by
+\citet{gathergood2019individuals} that -- instead of first paying down debt of
+their highest-interest credit card, people tend to allocate repayments across
+all their cards in proportion to outstanding debt. Further research
+establishing to what extent there is within-person variation of fund use, and
+whether such funds are directed towards the most effective uses would provide
+further useful insights into savings behaviour, and could serve as the basis
+for further development of FinTech apps to help users direct saved funds
+towards the most effective users.
+
+\subsection{Implications for FinTech apps}}
 
 My findings also have a number of direct implications for Money Dashboard and
 other FinTech apps. First, the finding that users reduce their discretionary
@@ -177,15 +191,13 @@ attractive for customers. Finally, and more generally, the findings show that
 the collaboration between FinTech apps and researchers is a win-win strategy
 for researchers to develop, test, and refine tools based on the latest
 theoretical insights at a large-scale and in relevant contexts, and for
-companies to benefit from the insights from that research in the form of more
+apps to benefit from the insights from that research in the form of more
 effective and -- ultimately -- more attractive and profitable apps. 
 
-This thesis has sought to understand how and show that an understanding of
-human behaviour, coupled with the possibilities of financial technology can be
-harnessed to provide people with tools that make it easier for the to manage
-their finances and -- ultimately -- improve their financial wellbeing. I do
-believe that this is an area with a large potential to do good. It is
-important, however, to not loose sight of the bigger picture and realise that
+\subsection{Broader context}
+
+This thesis has sought to contribute to a better understanding of how people make financial decisions and how financial technology and insights from behavioural science can be harnessed to help them make such decisions in ways that are aligned with their personal goals in cases where this is not the case. I believe this is an area or research with a large potential to do good. But I also believe that it is
+important to not loose sight of the bigger picture and realise that
 behavioural interventions -- however promising -- can only be part of the
 solution that must include broader measures. For instance,
 \citet{agarwal2017shapes} points out the important role of financial product
@@ -195,15 +207,14 @@ protection. More broadly, \citet{chater2022frame} point out that attempts to
 address problems with behavioural solutions are in danger of unwittingly
 crowding-out support for more impactful societal solutions. I think financial
 wellbeing is a case in point: I have discussed research that shows that people
-do not save as much as they think I could, indicating that there is a role for
+do not save as much as they themselves would like or think they could, indicating that there is a role for
 the kinds of approaches discussed in my thesis to help them do so. However, at
-least in some cases, the main problem will not be that people do not save
+least in some cases, the main problem is not that people do not save
 enough of what they earn, but that they do not earn enough to support
 themselves and their families in the first place. Hence, we must make sure that
 -- at an aggregate level -- we do not study the effectiveness of behavioural
 solutions at the cost of initiatives such as minimum-wage policies, educational
 and job-training programs, and improvements in tax schedules. We will not
 maximise financial wellbeing if we are content by helping people to better
-navigate the world as they find it -- we must also be concerned with shaping
-that world in their favour.
-
+navigate the world as they find it -- we must also shape that world so that it
+is more conducive to financial wellbeing.
