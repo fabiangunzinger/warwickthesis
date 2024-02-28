@@ -7,7 +7,7 @@ The overall aim of this thesis is to use transaction-level data from a
 financial aggregator app, insights from behavioural science, and methods from
 econometrics and machine learning to contribute to a better understanding of
 the determinants of how individuals spend their money and save for the
-short-term. This introductory chapter first discusses the context within which
+short-term. {\color{blue} To this end, the thesis makes both methodological contributions, which will aid future research in studying financial behaviour, and substantive contributions, which directly contribute to a better understanding of individual's spending and saving behaviours.} This introductory chapter first discusses the context within which
 this research takes place -- the importance of financial wellbeing, relevant
 insights from behavioural science, and opportunities presented by the emergence
 of FinTech apps -- and then provides an overview of the main chapters of the
@@ -67,15 +67,26 @@ increase their output by 7 percent. In a context where money is scarce, this mec
 The determinants of financial wellbeing are a combination of circumstantial and
 external factors as well as the capabilities, beliefs, and behaviours of the
 individual. \citet{mps2018building} provides a useful categorisation that sees
-financial wellbeing as a function of four broad factors: (i) external factors that
-include economic conditions, demographics, and a person's social environment; (ii)
-enablers that include financial confidence and numeracy, a sense of control,
-one's spending and savings mindset, and one's engagement with money, advice, and
-technology; (iii) day-to-day behaviours like managing the use of credit, avoiding to
-borrow for everyday spends, active saving, keeping track of and making
-adjustments to one's spending, and shopping around; and, (iv), planning ahead
-behaviours like building financial resilience through saving and planning for
-retirement.
+financial wellbeing as a function of four broad factors:
+
+{\color{blue}
+\begin{enumerate}
+    \item External factors that
+    include economic conditions, demographics, and a person's social environment.
+    
+    \item Enablers that include financial confidence and numeracy, a sense of control,
+    one's spending and savings mindset, and one's engagement with money, advice, and
+    technology.
+    
+    \item Day-to-day behaviours like managing the use of credit, avoiding to
+    borrow for everyday spends, active saving, keeping track of and making
+    adjustments to one's spending, and shopping around.
+    
+    \item Planning ahead
+    behaviours like building financial resilience through saving and planning for
+    retirement.
+\end{enumerate}
+}
 
 While no one factor is deterministic for financial wellbeing, research from the
 US \citep{cfpb2017financial} and the UK \citep{mps2018building} agrees that -- as
@@ -126,7 +137,7 @@ liquid net worth for the median household with a head aged 41-51 is only \$813,
 whereas at the 25th percentile it is -\$1,885
 \citep{beshears2018behavioral}.\footnote{Liquid net worth includes all assets
     (except pension wealth, retirement savings, homes, and durable assets) net
-of all debt (except student loans and collateralised debt).}
+of all debt (except student loans and collateralised debt).}\footnote{{\color{blue} In this discussion, I focus on the UK and the US because the former is where I am based and the latter is the world's largest economy and the main reference point for most of the literature cited throughout the thesis.}}
 
 This is problematic because many households do face unexpected financial shocks
 over the course of a year. Also, many households experience high income
@@ -179,14 +190,14 @@ narrowly \citep{kumar2008decision}, propensity to gamble
 \citep{kumar2009gambles}, one's social network \citep{bailey2018economic,
 kuchler2021social}, the degree of one's financial planning
 \citep{ameriks2003wealth}, and habits \citep{blumenstock2018defaults,
-schaner2018persistent, de2013deposit}.\footnote{For two thorough reviews of the
+schaner2018persistent, de2013deposit}. {\color{blue} The common denominators of all these findings is that people make financial (and other) decisions based on factors that are not included in standard economic models of decision making. As a result, understanding financial decision making requires an understanding or these factors, which include heuristics, cognitive limitations, attitudes, and a person's social environment.}\footnote{For two thorough reviews of the
 literature, see \citet{agarwal2017shapes} and \citet{greenberg2019financial}.}
 
 Researchers have also developed and tested a large number of approaches
 designed to help people make better decisions. I briefly discuss four such approaches
 that have the potential to help people make the financial choices they
 themselves would like to make. A complete review of that literature is provided
-by \citet{duckworth2018beyond}.
+by \citet{duckworth2018beyond}.\footnote{{\color{blue} Three of the four interventions are designed to help people overcome self-control problems. This is because this has been one of the most active fields of research, and has yielded some of the most prominent successes.}}
 
 The arguably most studied and most successful approach is the use of defaults. Defaults are consequential because people often stick
 with the status quo \citep{samuelson1988status}, tend to
@@ -213,7 +224,7 @@ if they fail to exercise as often as they wanted to, or to nominate a friend or
 family member who will verify whether they managed to stick to their spending
 goal.
 
-Another approach are implementation intentions, a particular type of planning
+Another approach is implementation intentions, a particular type of planning
 for the achievement of one's goals that involves ``if-then'' intentions, such as
 ``if I get paid, then I transfer 10 percent of it into my savings account''
 \citep{gollwitzer2006implementation, rogers2015beyond}. Such intentions have
@@ -246,6 +257,8 @@ researchers and financial institutions to do just that.
 
 
 \section{FinTech}%
+
+{\color{blue} FinTech apps are a crucial piece in helping us better understand financial decision making because they provide us with large scale individual level data at an unprecedented granularity (down to individual transactions) and collected automatically and thus more reliably, and at very little cost. This means that researchers are no longer solely reliant on lab or survey data, which opens many new opportunities for an enhanced understanding of financial decision making.}
 
 The combination of ever larger amounts of granular data about human behaviour, the ongoing progress in the development of machine-learning
 algorithms to elicit information from such data, and the increase in computing power
@@ -357,6 +370,19 @@ about how to work with these data and tools responsibly
 private companies as well as research institutions have put in place
 safeguarding procedures to ensure that such best practices and current
 regulations are followed at the level of individual research projects.
+
+{\color{blue}
+\section{Contribution}
+
+Overall, the work in this thesis makes two main methodological and two main substantive contributions.
+
+The first methodological contribution, in Chapter~\ref{cha:mlbt}, is the introduction of an approach that helps researchers elicit behaviour traits from large-scale transaction data. Being able to augment such data with behaviour traits will allow for answering a richer set of research questions that would otherwise be possible only in a lab setting.
+
+The second methodological contribution, in Chapter~\ref{cha:entropy}, is to show that a simple measure of the predictability of a person's spending is predictive of that person's savings behaviour. This suggests that simple summary measures of transaction data might capture information about a person's life circumstances that is predictive of other financial behaviours, which has the potential to both enhance our understanding of financial decision making, as well as to improve financial management apps with more personalised assistance.
+
+The finding that spending predictability is correlated with savings is also a substantive contribution. In particular, I show that the relationship is robust to different specifications, and economically and statistically significant. What remains to be explored further is what precisely our measure of spending predictability captures.
+
+The second substantive finding, in Chapter~\ref{cha:eval}, is that a decrease in discretionary spending is not automatically mirrored by an increase in payments into savings accounts. I also show how the decrease in discretionary spending is achieved: it's the result of a reduction in the number of purchases, sustained over time, and across a number of different expenditure categories.}
 
 
 \section{Thesis outline}%
