@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../mdb_eval"
+		},
+		{
+			"path": "../mlbt"
+		},
+		{
+			"path": "../entropy"
+		}
+	],
+	"settings": {}
+}
